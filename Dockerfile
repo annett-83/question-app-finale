@@ -1,4 +1,4 @@
-FROM node:17 as client
+FROM node:16 as client
 
 WORKDIR /app/client
 
@@ -24,6 +24,7 @@ COPY --from=client /app/client/build /app/client
 
 EXPOSE 8080
 
-CMD ["npm","start"]
+CMD "npm" "start"
+
 
 
