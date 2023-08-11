@@ -71,7 +71,7 @@ function* userIndependentData_fetchCyclic_data() {
         } catch (error) {
             console.log("teachererror", error);
         }
-        yield delay(100000);
+        yield delay(1000);
     }
 }
 
