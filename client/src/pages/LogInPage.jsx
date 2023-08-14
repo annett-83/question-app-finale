@@ -56,7 +56,7 @@ const LogInPage = () => {
             if (error.code === "ERR_NETWORK") {
                 return { [FORM_ERROR]: "Network Error" };
             } else {
-                return { password: "wrong email or password" };
+                return { password: "неправильно введен пароль или логин" };
             }
         } else {
             dispatch(storeActions.currentuser_set_newToken(data));

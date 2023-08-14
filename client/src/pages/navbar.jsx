@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 import logo from "../components/img/pc7rLGMKi_small.jpg";
 import { states as currentUserStates } from "../store/userSlice";
 import { actions as storeActions } from "../store/sagas";
-// import { shallowEqual } from "../../node_modules/shallow-equal/dist/index";
 import _ from "lodash";
 import { ColorRing } from "../../node_modules/react-loader-spinner/dist/index";
 

@@ -8,7 +8,7 @@ const QuestionAnswerState = ({ question }) => {
         ? (
             <button onClick={() => navigate("/teacher/" + question.answer.user._id)} type="button" className="btn btn-link">{question.answer.user.name} </button>
         )
-        : (
+        : ( // ?  стоит для вопроса, ?! учитель может на него ответить
             <span>?{question.canAnswer ? <span>!</span> : <span></span>}</span>
         );
 };

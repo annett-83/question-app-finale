@@ -34,7 +34,7 @@ const CreateQuestionPage = () => {
             } else {
                 const n = Number(values.price);
                 if (isNaN(n)) {
-                    errors.price = "Enter a valid amount"; // не работает?
+                    errors.price = "Ввидите число"; // не работает?
                 } else {
                     if (n < 50) {
                         errors.price = "Цена должна быть минимум 50 рублей";
@@ -105,7 +105,7 @@ const CreateQuestionPage = () => {
                 await questionService.create(values);
                 navigate(-1);
             } catch (error) {
-                return { [FORM_ERROR]: "Upload Failed" };
+                return { [FORM_ERROR]: "Не загрузилось" };
             }
         };
 

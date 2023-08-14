@@ -31,11 +31,9 @@ export const actions = {
 
 function* initialize_store() {
     yield put(actions.userIndependentData_fetchCyclic_data());
-    yield delay(3000);
-    yield put(actions.userIndependentData_fetchCyclic_data());
     yield put(actions.userDependentData_fetchCyclic_data());
 }
-function* currentuser_set_NewToken(action) {
+function* currentuser_set_NewToken(action) { // в процессе разработки
     yield put(errorSlice.actions.resetErrror({ context: action.type }));
     try {
         yield put(userSlice.actions.setLoading());

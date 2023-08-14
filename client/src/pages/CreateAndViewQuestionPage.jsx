@@ -11,15 +11,14 @@ import { Typography, Paper, Grid, Button, CssBaseline } from "@mui/material";
 
 const CreateAndViewQuestionPage = () => {
     const params = useParams();
-    const { questionId } = params;
+    const { questionId } = params; // react-router url
 
     const navigate = useNavigate();
 
     const selectFilteredQuestions = createSelector(
         (state) => state.user.data.questionData,
         (questionArray) => questionArray.find((q) => q._id === questionId)
-    );
-
+    );// обновляет (render) добовляет ответ 
     const questionData = useSelector(selectFilteredQuestions);
 
     const validate = (values) => {
@@ -27,7 +26,7 @@ const CreateAndViewQuestionPage = () => {
         if (!values.answer) {
             errors.answer = "Поле должно быть заполнено.";
         } else {
-            if (values.answer.length < 100) {
+            if (values.answer.length < 10) {
                 errors.answer = "Ответ должен содержать более одного предложения";
             }
         }

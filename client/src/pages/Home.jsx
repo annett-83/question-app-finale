@@ -13,7 +13,7 @@ const Home = () => {
     const isLoadingSubjectData = useSelector(subjectStates.isLoading);
     const isLoadingTeacherData = useSelector(teacherStates.isLoading);
 
-    if (userData) {
+    if (userData) { //если залогинился пользователь
         return <QuestionList />;
     } else {
         return (
