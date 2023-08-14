@@ -15,11 +15,7 @@
         "react/prop-types": 0,
         "linebreak-style": 0,
         "quotes": ["error", "double"],
-        "rules": {
-            // increase the severity of rules so they are auto-fixable
-            "simple-import-sort/imports": "off",
-            "simple-import-sort/exports": "off"
-          }
+      
     },
     "parserOptions": {
         "ecmaVersion": 2021,
