@@ -4,7 +4,7 @@
         "plugin:import/errors",
         "plugin:react/recommended"
     ],
-    "plugins": ["react", "import","simple-import-sort"],
+    "plugins": ["react", "import"],
     "rules": {
         "semi": [2, "always"],
         "indent": ["error", 4],
@@ -14,8 +14,7 @@
         ],
         "react/prop-types": 0,
         "linebreak-style": 0,
-        "quotes": ["error", "double"],
-      
+        "quotes": ["error", "double"]
     },
     "parserOptions": {
         "ecmaVersion": 2021,
