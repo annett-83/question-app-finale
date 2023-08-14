@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 import Dropdown from "react-bootstrap/Dropdown";
-import { useSelector, useDispatch } from "react-redux";
+import Form from "react-bootstrap/Form";
+import Navbar from "react-bootstrap/Navbar";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import logo from "../components/img/pc7rLGMKi_small.jpg";
-import { states as currentUserStates } from "../store/userSlice";
-import { actions as storeActions } from "../store/sagas";
 import _ from "lodash";
+
 import { ColorRing } from "../../node_modules/react-loader-spinner/dist/index";
+import logo from "../components/img/pc7rLGMKi_small.jpg";
+import { actions as storeActions } from "../store/sagas";
+import { states as currentUserStates } from "../store/userSlice";
 
 function QuestionAppNavbar() {
     const navigate = useNavigate();
@@ -18,7 +19,6 @@ function QuestionAppNavbar() {
     const isLoadingUserData = useSelector(currentUserStates.isLoadingUserData);
     const dispatch = useDispatch();
     useEffect(() => {
-        console.log("Navigated Home");
         navigate("/");
     }, [userData, isLoadingUserData]);
 

@@ -1,19 +1,21 @@
-import { call, put, takeLatest, delay, select } from "redux-saga/effects";
-import userService from "../services/user.service";
-import {
-    setTokens,
-    removeAuthData,
-    hasValidToken,
-} from "../services/localStorage.service";
-import subjectService from "../services/subjectService";
-import questionService from "../services/questionService";
-import teacherService from "../services/teacherService";
 import { createAction } from "@reduxjs/toolkit";
-import subjectSlice from "./subjectSlice";
-import userSlice from "./userSlice";
-import teacherSlice from "./teacherSlice";
-import errorSlice from "./errorSlice";
+import { call, delay, put, select, takeLatest } from "redux-saga/effects";
+
+import {
+    hasValidToken,
+    removeAuthData,
+    setTokens,
+} from "../services/localStorage.service";
+import questionService from "../services/questionService";
+import subjectService from "../services/subjectService";
+import teacherService from "../services/teacherService";
+import userService from "../services/user.service";
 import { states as currentUserStates } from "../store/userSlice";
+
+import errorSlice from "./errorSlice";
+import subjectSlice from "./subjectSlice";
+import teacherSlice from "./teacherSlice";
+import userSlice from "./userSlice";
 /* Define Actions */
 export const actions = {
     initialize_store: createAction("INITIALIZE_STORE"),

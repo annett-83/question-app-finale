@@ -1,20 +1,21 @@
-import { useEffect, useState, React } from "react";
+import { React, useEffect, useState } from "react";
 import { Form } from "react-final-form";
-import { TextField, Checkboxes, Select } from "mui-rff";
-import userService from "../services/user.service";
-import { FORM_ERROR } from "final-form";
-import { useSelector, useDispatch } from "react-redux";
-import { actions as storeActions } from "../store/sagas";
-import { states as currentUserStates } from "../store/userSlice";
-import _ from "lodash";
+import { useDispatch, useSelector } from "react-redux";
 import {
-    Typography,
-    Paper,
-    Grid,
     Button,
     CssBaseline,
-    MenuItem
+    Grid,
+    MenuItem,
+    Paper,
+    Typography
 } from "@mui/material";
+import { FORM_ERROR } from "final-form";
+import _ from "lodash";
+import { Checkboxes, Select, TextField } from "mui-rff";
+
+import userService from "../services/user.service";
+import { actions as storeActions } from "../store/sagas";
+import { states as currentUserStates } from "../store/userSlice";
 
 const CreatEditUserProfilePage = () => {
     const [formInitialValues, setFormInitialValues] = useState();

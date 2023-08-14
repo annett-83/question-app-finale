@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const QuestionAnswerState = ({ question }) => {
     const navigate = useNavigate();

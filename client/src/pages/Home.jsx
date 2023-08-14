@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+
+import { ColorRing } from "../../node_modules/react-loader-spinner/dist/index";
 import QuestionList from "../components/questionList.jsx";
 import UserTeacherList from "../components/userTeacherList.jsx";
-import { states as teacherStates } from "../store/teacherSlice";
 import { states as subjectStates } from "../store/subjectSlice";
-import { ColorRing } from "../../node_modules/react-loader-spinner/dist/index";
+import { states as teacherStates } from "../store/teacherSlice";
 
 
 const Home = () => {
